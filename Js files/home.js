@@ -39,6 +39,14 @@ export class games {
     }
 
 
+
+    detailsToggle(id) {
+        const details = new Details(id);
+        document.querySelector(".Home").classList.add("d-none");
+        document.querySelector(".details").classList.remove("d-none");
+    }
+
+
     openDetails() {
         document.querySelectorAll(".card").forEach((item) => {
         item.addEventListener("click", () => {
@@ -46,12 +54,6 @@ export class games {
             this.detailsToggle(id);
         });
         });
-    }
-
-    detailsToggle(idGame) {
-        const details = new Details(idGame);
-        document.querySelector(".Home").classList.add("d-none");
-        document.querySelector(".details").classList.remove("d-none");
     }
 
 
